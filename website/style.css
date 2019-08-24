@@ -7,20 +7,48 @@ html, body {
     color: #222;
 }
 
+.btn-primary {
+    background-color: #2e629e;
+    border: 1px solid #2e629e;
+}
+.btn-primary:hover {
+    background-color: #244b79;
+    border: 1px solid #244b79;
+}
+
+.btn-outline-secondary {
+    color: #2e629e;
+    border: 2px solid #2e629e;
+} 
+.btn-outline-secondary:hover {
+    color: white;
+    background-color: #2e629e;
+    border: 2px solid #2e629e;
+}
+
+a {
+    color: #2e629e;
+}
+a:hover {
+    color: #244b79;
+}
+
 .navbar-nav li:not(:last-child) {
     padding-right: 20px;
 }
 .navbar .container, footer .container {
     max-width: 1200px;
-    padding: 0.3em 0;
+    padding: 0 16px;
 }
 
 .wrapper {
+    /* full height - navbar - footer - margin-bottom */
+    min-height: calc(100vh - 56px - 60px - 3em);
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.container-fluid .row:not(.footer) {
+.container-fluid .row.presentation, .container-fluid .row.projects-links {
     margin-bottom: 3em;
 }
 
@@ -53,7 +81,19 @@ html, body {
 }
 
 footer {
-    background-color: #3f3f3f;
+    background-color: #494949;
+    color: #d5d5d5;
+}
+footer h5 {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin: auto 0;
+}
+footer .social {
+    text-align: right;
+}
+footer a i {
+    font-size: 1.5em;
     color: #d5d5d5;
 }
 /*---Media Queries --*/
@@ -80,4 +120,10 @@ footer {
 
 /* Small devices (phones) */
 @media (max-width: 576px) {
+    footer .copyright {
+        padding-bottom: 0.5em;
+    }
+    footer .copyright, footer .social {
+        text-align: center;
+    }
 }
