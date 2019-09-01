@@ -72,15 +72,12 @@ a:hover {
     margin: auto;
 }
 
-.projects {
+.header-paragraph {
     width: 90%;
     margin: 0 auto;
 }
-.projects hr {
-    border-top: 1px solid #b4b4b4;
-    width: 100%;
-    margin-top: 0em;
-    margin-bottom: 0em;
+.header-paragraph div:first-child {
+    padding-bottom: 0;
 }
 
 footer {
@@ -93,8 +90,12 @@ footer h5 {
     margin: auto 0;
 }
 
-.app-feature {
+div.app-feature {
+    max-height: 600px !important;
+}
+img.app-feature {
     max-width: 100%;
+    max-height: 600px !important;
 }
 
 .show-sm {
@@ -114,7 +115,7 @@ footer h5 {
 }
 
 /* Medium devices (tablets) */
-@media (max-width: 768px) {
+@media (max-width: 768px) {    
 }
 
 /* Small devices (phones) */
@@ -125,4 +126,14 @@ footer h5 {
     .hide-sm {
         display: none;
     }
+}
+
+/* Small devices (phones) */
+@media (min-width: 0px) {
+    /* .show-xs {
+        display: block;
+    }
+    .hide-xs {
+        display: none;
+    } */
 }
