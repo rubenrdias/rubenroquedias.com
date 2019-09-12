@@ -64,6 +64,10 @@ a:hover {
     margin-bottom: 3em;
 }
 
+.jumbotron {
+    padding: 2rem 2em;
+}
+
 .links {
     padding: 0 !important;
 }
