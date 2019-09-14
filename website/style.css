@@ -43,7 +43,7 @@ a:hover {
     padding-right: 16px;
 }
 .navbar-brand {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
 }
 .navbar .container, footer .container  {
     max-width: 1200px;
@@ -103,6 +103,12 @@ footer h5 {
     font-weight: 500;
     margin: auto 0;
 }
+footer a {
+    color: #d5d5d5;
+}
+footer a:hover {
+    color: white;
+}
 
 div.app-feature {
     max-height: 600px !important;
@@ -144,10 +150,4 @@ img.app-feature {
 
 /* Small devices (phones) */
 @media (min-width: 0px) {
-    /* .show-xs {
-        display: block;
-    }
-    .hide-xs {
-        display: none;
-    } */
 }

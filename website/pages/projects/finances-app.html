@@ -13,27 +13,18 @@
     <link href="../../style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d5174f04b4.js"></script>
 
-    <title>FinancesApp</title>
+    <title>Finances App</title>
 </head>
 <body>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container">
-        <div class="navbar-brand">Ruben Dias</div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <div class="navbar-brand">Finances App</div>
+        <div>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="../projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Me</a>
+                    <a class="nav-link" href="../../home.html">Home</a>
                 </li>
             </ul>
         </div>
@@ -41,8 +32,33 @@
 </nav>
 
 <div class="wrapper">
-    <div class="container-fluid">
+    <!-- Description -->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <p>This application is my major solo project and it has been in the works for a while, it is almost ready for publishing to the app store.</p>
+                <p>I wanted to make something on my own, and as I love tracking things in my life, this idea came up. This gives me the freedom to learn new things according to the functionalies I'm trying to implement. These are the main functionalities provided so far:</p>
+                <ul>
+                    <li>Customizable accounts, categories and tags</li>
+                    <li>Creating budgets for expense control, for specific categories or tags</li>
+                    <li>Account balance overview (charts)</li>
+                    <li>In-depth analysis for category and tag spending (charts)</li>
+                    <li>Theming: dark mode, custom accent colors </li>
+                </ul>
+                <p class="text-muted m-0">A repository link will not be provided, as I expect to obtain finantial benefit from this application when it is released.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Relevant Technologies</h4>
+                <ul>
+                    <li>Core Data, for storing all application data</li>
+                    <li>'Charts' pod, for generating beautiful charts for data analysis</li>
+                    <li>Accessory pods: 'Floaty' for FAB functionality; 'SwipeCellKit' for collection view cell swiping; 'UICircularProgressRing' for budgets; 'Acknowlist' for acknowledgments page</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <div class="container-fluid">
         <!-- Transactions -->
         <div class="row spaced">
             <div class="col-md-1 hide-sm">
@@ -207,7 +223,7 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
-                <h5>&copy; Ruben Dias &bull; 2019</h5>
+                <h5>&copy; Ruben Dias &bull; 2019 &bull; <a href="https://www.linkedin.com/in/rubenroquedias" target="_blank"><i class="fab fa-linkedin"></i></a>   <a href="https://bitbucket.org/ruben_dias" target="_blank"><i class="fab fa-bitbucket"></i></a></h5>
             </div>
         </div>
     </div>
