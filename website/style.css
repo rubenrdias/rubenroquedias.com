@@ -52,7 +52,7 @@ a:hover {
 
 .wrapper {
     /* full height - navbar - footer - margin-bottom */
-    min-height: calc(100vh - 56px - 60px - 3em);
+    min-height: calc(100vh - 56px - 51px - 6em + 16px);
     max-width: 1200px;
     margin-top: calc(3em - 16px);
     margin-bottom: 0;
@@ -131,12 +131,10 @@ img.app-feature {
 }
 
 /* Large devices (desktops) */
-@media (max-width: 992px) {
-}
+@media (max-width: 992px) { }
 
 /* Medium devices (tablets) */
-@media (max-width: 768px) {    
-}
+@media (max-width: 768px) { }
 
 /* Small devices (phones) */
 @media (max-width: 576px) {
@@ -149,5 +147,4 @@ img.app-feature {
 }
 
 /* Small devices (phones) */
-@media (min-width: 0px) {
-}
+@media (min-width: 0px) { }
