@@ -66,20 +66,22 @@ a:hover {
 }
 
 .banner {
-    background-image: url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2978&q=80");
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0 16px 0 -16px;
+    text-align: center;
 }
+.banner img {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin-bottom: 1em;
 
-.banner .centered div {
-    color: white;
-    display: block;
-    padding: 100px 120px;
-
-    background: rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:    0 0 4px 1px rgb(196, 196, 196);
+    -webkit-box-shadow: 0 0 4px 1px rgb(196, 196, 196);
+    box-shadow:         0 0 4px 1px rgb(196, 196, 196);
+}
+.banner p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
 }
 
 .jumbotron {
@@ -87,8 +89,9 @@ a:hover {
     padding: 2rem 2em;
 }
 
-.links {
-    padding: 0 !important;
+.container-fluid .row.spaced {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .row div {
@@ -100,8 +103,8 @@ a:hover {
     display: flex;
 }
 
-.centered a, .centered div {
-    margin: auto;
+.centered div {
+    margin: auto 16px;
 }
 
 .header-paragraph {
@@ -133,46 +136,91 @@ footer a:hover {
     text-align: center;
 }
 .card img {
-    max-width: 300px;
+    max-width: 50%;
+    margin-bottom: 16px;
 }
 
 .app-feature img {
-    max-height: 600px;
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.app-feature-design img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
 }
 
+.show-md {
+    display: none !important;
+}
+
 .show-sm {
-    display: none;
+    display: none !important;
 }
 
 /*---Media Queries --*/
 /* Extra Large devices (large desktops) */
 @media (max-width: 1200px) {
+    .banner p {
+        max-width: 70%;
+    }
     .navbar .container  {
         padding: 0;
     }
 }
 
 /* Large devices (desktops) */
-@media (max-width: 992px) { }
+@media (max-width: 992px) { 
+    .banner p {
+        max-width: 80%;
+    }
+    .card img {
+        max-width: 60%;
+    }
+    .app-feature img {
+        max-width: 80%;
+    }
+}
 
 /* Medium devices (tablets) */
-@media (max-width: 768px) { }
+@media (max-width: 768px) {
+    .banner p {
+        max-width: 90%;
+    }
+    .card img {
+        max-width: 40%;
+    }
+    .app-feature img {
+        max-width: 80%;
+    }
+    .show-md {
+        display: block !important;
+    }
+    .hide-md {
+        display: none !important;
+    }
+ }
 
 /* Small devices (phones) */
 @media (max-width: 576px) {
+    .banner p {
+        max-width: 80%;
+    }
     .card img {
-        max-width: 200px;
+        max-width: 60%;
+    }
+    .app-feature img {
+        max-width: 40%;
     }
     .show-sm {
-        display: block;
+        display: block !important;
     }
     .hide-sm {
-        display: none;
+        display: none !important;
     }
 }
 
 /* Small devices (phones) */
-@media (min-width: 0px) { }
+@media (min-width: 0px) {}
