@@ -139,6 +139,11 @@ footer a:hover {
     max-width: 50%;
     margin-bottom: 16px;
 }
+.gif {
+    -moz-box-shadow:    0 0 4px 1px rgb(196, 196, 196);
+    -webkit-box-shadow: 0 0 4px 1px rgb(196, 196, 196);
+    box-shadow:         0 0 4px 1px rgb(196, 196, 196);
+}
 
 .app-feature img {
     max-width: 80%;
