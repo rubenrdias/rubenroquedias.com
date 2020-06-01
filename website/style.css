@@ -151,6 +151,19 @@ footer a:hover {
     margin: 0 auto;
 }
 
+.app-feature .double-image {
+    text-align: center;
+}
+
+.app-feature .double-image img {
+    max-width: 40%;
+    display: inline-block;
+}
+
+.app-feature .double-image img:first-child {
+    margin-right: 24px;
+}
+
 .app-feature-design img {
     max-width: 100%;
     display: block;

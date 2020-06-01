@@ -47,7 +47,7 @@
                     <li>iPad support for a seamless experience in all devices</li>
                     <li>Dark theme support for devices running iOS 13 or up</li>
                 </ul>
-                <a href="https://www.figma.com/file/C11jUYQpPRVeyhmJzn4NWl/App-Design" target="_blank"><button class="btn btn-outline-secondary">Figma Design</button></a>
+                <a href="https://www.figma.com/file/C11jUYQpPRVeyhmJzn4NWl/App-Design" target="_blank"><button class="btn btn-outline-secondary">Figma Design</button></a>&nbsp;&nbsp;
                 <a href="https://github.com/rubenrdias/couchclub" target="_blank" class="btn btn-outline-secondary">Source Code</a>
             </div>
             <div class="col-md-6">
@@ -56,7 +56,12 @@
                     <li>Core Data - store all application data</li>
                     <li>Firebase: Auth - user accounts, login and account creation</li>
                     <li>Firebase: Firestore - business logic (chatrooms and messages, watchlists)</li>
-                    <li>Firebase: Cloud Functions - push notifications, database cleanup</li>
+                    <li>Firebase: Messaging + Cloud Functions - push notifications, database cleanup</li>
+                </ul>
+                <h4>Implementation Details</h4>
+                <ul>
+                    <li>REST Interface - API for Movies/Shows</li>
+                    <li>Uses design patterns: coordinator, builder, singleton</li>
                 </ul>
             </div>
         </div>
@@ -65,31 +70,28 @@
     <div class="container-fluid">
         <!-- Watchlists Design -->
         <div class="row spaced app-feature-design">
-            <div class="col-lg-1 hide-md"></div>
-            <div class="col-md-6 col-lg-5">
+            <div class="col-md-6 col-lg-5 offset-lg-1">
                 <img src="../img/couchclub/Design_Watchlists.png">
             </div>
             <div class="col-md-6 col-lg-5 centered">
                 <div>
-                    <h3>Watchlists</h3>
+                    <h3>Design - Watchlists</h3>
                     <p>The Watchlist flow designed in Figma. </p>
                     <p>Create watchlists, see watchlist details and information, search for movies/shows and add them to your lists.</p>
                 </div>                        
             </div>
-            <div class="col-lg-1 hide-md"></div>
         </div>
 
         <hr>
     
         <!-- Chatrooms Design -->
         <div class="row spaced app-feature-design">
-            <div class="col-xl-1 hide-md"></div>
             <div class="col-md-6 col-lg-5 show-md">
                 <img src="../img/couchclub/Design_Chatrooms.png">
             </div>
-            <div class="col-md-6 col-lg-5 centered">
+            <div class="col-md-6 col-lg-5 centered offset-lg-1">
                 <div>
-                    <h3>Chatrooms</h3>
+                    <h3>Design - Chatrooms</h3>
                     <p>The Chatroom flow designed in Figma.</p>
                     <p>Create chatrooms based on a watchlist, or individual movies/shows. Then, chat with friends!</p>
                 </div>                        
@@ -97,139 +99,184 @@
             <div class="col-md-6 col-lg-5 hide-md">
                 <img src="../img/couchclub/Design_Chatrooms.png">
             </div>
-            <div class="col-md-1 hide-md"></div>
         </div>
 
         <hr>
 
         <!-- Login/Register Design -->
         <div class="row spaced app-feature-design">
-            <div class="col-lg-1 hide-md"></div>
-            <div class="col-md-6 col-lg-5">
+            <div class="col-md-6 col-lg-5 offset-lg-1">
                 <img src="../img/couchclub/Design_Login.png">
             </div>
             <div class="col-md-6 col-lg-5 centered">
                 <div>
-                    <h3>User Accounts</h3>
+                    <h3>Design - User Account</h3>
                     <p>The Login/Register flow designed in Figma. </p>
                     <p>Create an account, or login, to begin using the app.</p>
                 </div>                        
             </div>
-            <div class="col-lg-1 hide-md"></div>
         </div>
 
         <hr>
     
-        <!-- Implemented Screens -->
+        <!-- Video Demos -->
         <div class="row header-paragraph text-center">
             <div class="col-12">
-                <h1 class="section-title">Implemented Screens</h1>
+                <h1 class="section-title">App Demos</h1>
             </div>
             <div class="col-12">
-                <p class="">These are the currently functional screens, even if not all functionality is available.</p>
+                <p class="">Short clips demonstrating how the app works.</p>
             </div>
         </div>
 
-        <!-- Watchlists -->
+        <!-- Watchlist Demo -->
         <div class="row spaced app-feature">
-            <div class="col-md-1 hide-sm"></div>
-            <div class="col-sm-6 col-md-4">
-                <img src="../img/couchclub/Watchlists.png">
+            <div class="col-sm-6 col-md-4 offset-md-1">
+                <img class="gif" src="../img/couchclub/Demo_Watchlist.gif">
             </div>
             <div class="col-sm-6 col-md-6 centered">
                 <div>
-                    <h3>Create your Watchlists</h3>
-                    <p>Begin tracking your favorite movies or shows by first setting up a watchlist.</p>
+                    <h3>Watchlists</h3>
+                    <p>Create a list for tracking movies or shows you want to watch. Mark them as watched as you go, to see your progress.</p>
                 </div>                        
             </div>
-            <div class="col-md-1 hide-sm"></div>
         </div>
 
         <hr>
 
-        <!-- Watchlist Detail -->
+        <!-- Chatroom Demo -->
         <div class="row spaced app-feature">
-            <div class="col-md-1 hide-sm"></div>
             <div class="col-sm-6 col-md-4 show-sm">
-                <img src="../img/couchclub/Watchlist.png">
+                <img class="gif" src="../img/couchclub/Demo_Chatroom.gif">
             </div>
-            <div class="col-sm-6 col-md-6 centered">
+            <div class="col-sm-6 col-md-6 centered offset-md-1">
                 <div>
-                    <h3>Track your Progress</h3>
-                    <p>Keep track of the movies or shows you are seeing.</p>
-                    <p>You can add/remove items from the watchlist, as well as mark items as seen.</p>
+                    <h3>Chatrooms</h3>
+                    <p>Select a topic (movie/show, watchlist) and chat with your friends about it. No community, just your friends.</p>
                 </div>                        
             </div>
             <div class="col-sm-6 col-md-4 hide-sm">
-                <img src="../img/couchclub/Watchlist.png">
+                <img class="gif" src="../img/couchclub/Demo_Chatroom.gif">
             </div>
-            <div class="col-md-1 hide-sm"></div>
         </div>
 
         <hr>
 
-        <!-- Search -->
+        <!-- Join Chatroom Demo -->
         <div class="row spaced app-feature">
-            <div class="col-md-1 hide-sm"></div>
-            <div class="col-sm-6 col-md-4">
-                <img src="../img/couchclub/Search.png">
+            <div class="col-sm-6 col-md-4 offset-md-1">
+                <img class="gif" src="../img/couchclub/Demo_Join_Chatroom.gif">
             </div>
             <div class="col-sm-6 col-md-6 centered">
                 <div>
-                    <h3>Find Movies and Shows</h3>
-                    <p>Search for your favorite movies and shows and quickly get to what you are looking for.</p>
-                    <p>You can also change the layout mode to make discovery easier, to see the results in a list or grid.</p>
+                    <h3>Join Chatrooms</h3>
+                    <p>Chat with your friends by joining a chatroom. Have them share with you an Invite Code, and effortlessly join the conversation.</p>
                 </div>                        
             </div>
-            <div class="col-md-1 hide-sm"></div>
         </div>
 
         <hr>
 
-        <!-- Item Detail -->
+        <!-- Real-time Chat Demo -->
         <div class="row spaced app-feature">
-            <div class="col-md-1 hide-sm"></div>
-            <div class="col-sm-6 col-md-4 show-sm">
-                <img src="../img/couchclub/Item Detail.png">
+            <div class="col-md-6 col-lg-4 show-md">
+                <div class="p-0 double-image">
+                    <img class="gif" src="../img/couchclub/Demo_Chatroom_1.gif">
+                    <img class="gif" src="../img/couchclub/Demo_Chatroom_2.gif">
+                </div>
             </div>
-            <div class="col-sm-6 col-md-6 centered">
+            <div class="col-md-6 col-lg-6 centered offset-lg-1">
                 <div>
-                    <h3>Detailed Information</h3>
-                    <p>See more information about the movie or show you want to explore.</p>
-                    <p>You can then add it to a watchlist, or start a chatroom to discuss with friends.</p>
+                    <h3>Chat with Friends</h3>
+                    <p>Enjoy a real-time chat with friends about a watchlist, movie or show you are watching together.</p>
                 </div>                        
             </div>
-            <div class="col-sm-6 col-md-4 hide-sm">
-                <img src="../img/couchclub/Item Detail.png">
+            <div class="col-md-6 col-lg-4 hide-md">
+                <div class="p-0 double-image">
+                    <img class="gif" src="../img/couchclub/Demo_Chatroom_1.gif">
+                    <img class="gif" src="../img/couchclub/Demo_Chatroom_2.gif">
+                </div>
             </div>
-            <div class="col-md-1 hide-sm"></div>
         </div>
 
         <hr>
     
-        <!-- Additional Screenshots -->
+        <!-- Additional iPhone Screenshots -->
         <div class="row header-paragraph text-center">
             <div class="col-12">
-                <h1 class="section-title">Additional Screenshots</h1>
+                <h1 class="section-title">iPhone Screenshots</h1>
+            </div>
+            <div class="col-12">
+                <p class="">Detailed screens of the app being used.</p>
+            </div>
+        </div>
+        
+        <div class="row spaced app-feature-design">
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Login.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Create Account.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Watchlists.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Watchlist.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Search.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Item Detail.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Chatrooms.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Chatroom.png">
+            </div>
+            <div class="col-6 col-sm-4 col-md-3">
+                <img src="../img/couchclub/iPhone/Invite Code.png">
+            </div>
+        </div>
+
+        <hr>
+    
+        <!-- Additional iPad Screenshots -->
+        <div class="row header-paragraph text-center">
+            <div class="col-12">
+                <h1 class="section-title">iPad Screenshots</h1>
             </div>
             <div class="col-12">
                 <p class="">See how the CouchClub adapts to iPad.</p>
             </div>
         </div>
 
-        <!-- Search -->
         <div class="row spaced app-feature-design">
             <div class="col-sm-12 col-md-6">
-                <img src="../img/couchclub/ipad/Watchlists.png">
+                <img src="../img/couchclub/iPad/Login.png">
             </div>
             <div class="col-sm-12 col-md-6">
-                <img src="../img/couchclub/ipad/Watchlist.png">
+                <img src="../img/couchclub/iPad/Create Account.png">
             </div>
             <div class="col-sm-12 col-md-6">
-                <img src="../img/couchclub/ipad/Search.png">
+                <img src="../img/couchclub/iPad/Watchlists.png">
             </div>
             <div class="col-sm-12 col-md-6">
-                <img src="../img/couchclub/ipad/Item Detail.png">
+                <img src="../img/couchclub/iPad/Watchlist.png">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="../img/couchclub/iPad/Search.png">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="../img/couchclub/iPad/Item Detail.png">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="../img/couchclub/iPad/Chatrooms.png">
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <img src="../img/couchclub/iPad/Chatroom.png">
             </div>
         </div>
     </div>
