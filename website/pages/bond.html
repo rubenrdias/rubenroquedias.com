@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Additional links -->
+    <link href="../style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d5174f04b4.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <title>CouchClub</title>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+        <div class="navbar-brand">Bond - eBike on Demand</div>
+        <div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../home.html"><i class="fa fa-home"></i>&nbsp;Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <!-- Description -->
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <p>The idea for this application emerged after having experience one too many spoils regarding some movie or tv show while reading in group chats.</p>
+                <p>The aim is to provide a place for people discuss at will with their friends any movie or show that they are currently watching. These are the planned features</p>
+                <ul>
+                    <li>Create watchlists, to track a group of movies or shows to watch later</li>
+                    <li>Collaborative watchlists, to enable a group viewing experience</li>
+                    <li>Search for movies or shows</li>
+                    <li>Create chatrooms to discuss a certain watchlist, movie or show</li>
+                    <li>iPad support for a seamless experience in all devices</li>
+                    <li>Dark theme support for devices running iOS 13 or up</li>
+                </ul>
+                <a href="https://apps.apple.com/us/app/bond/id1154109900?mt=8" class="btn"  target="_blank" style="display:inline-block; overflow:hidden; background:url(../img/AppStoreBadge.svg) no-repeat; width:135px; height:42px;"></a>
+            </div>
+            <div class="col-md-6">
+                <h4>Relevant Technologies</h4>
+                <ul>
+                    <li>Built entirely with Swift</li>
+                    <li>Core Data - store all application data</li>
+                    <li>Firebase: Auth - user accounts, login and account creation</li>
+                    <li>Firebase: Firestore - business logic (chatrooms and messages, watchlists)</li>
+                    <li>Firebase: Messaging + Cloud Functions - push notifications, database cleanup</li>
+                </ul>
+                <h4>Implementation Details</h4>
+                <ul>
+                    <li>REST Interface - API for Movies/Shows</li>
+                    <li>Uses design patterns: coordinator, builder, singleton</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+        <!-- Registration Flow -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 offset-md-1">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Registration.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered">
+                <div>
+                    <h3>Registration Flow</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Discover Bikes -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 show-sm">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Discover Bikes.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered offset-md-1">
+                <div>
+                    <h3>Discovery</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+            <div class="col-sm-6 col-md-4 hide-sm">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Discover Bikes.mov"/>
+				</video>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Ride -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 offset-md-1">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Ride.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered">
+                <div>
+                    <h3>Ride</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Reservation -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 show-sm">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Reservation.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered offset-md-1">
+                <div>
+                    <h3>Reservation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+            <div class="col-sm-6 col-md-4 hide-sm">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Reservation.mov"/>
+				</video>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Driver's License Verification -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 offset-md-1">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/DLV.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered">
+                <div>
+                    <h3>DLV</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Payment Methods -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 show-sm">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Payment Methods.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered offset-md-1">
+                <div>
+                    <h3>Payment Methods</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+            <div class="col-sm-6 col-md-4 hide-sm">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Payment Methods.mov"/>
+				</video>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Ride -->
+        <div class="row spaced app-feature">
+            <div class="col-sm-6 col-md-4 offset-md-1">
+				<video class="bg-shadow" controls loop>
+					<source src="../img/bond/Menu Options.mov"/>
+				</video>
+            </div>
+            <div class="col-sm-6 col-md-6 centered">
+                <div>
+                    <h3>Menu Options</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
+                </div>                        
+            </div>
+        </div>
+		
+    </div>
+
+	&nbsp;
+
+</div>
+
+<!--- Footer -->
+<footer>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h5>&copy; Ruben Dias &bull; 2020</h5>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
