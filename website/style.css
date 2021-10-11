@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
 }
 
+p, li {
+    color: #404040;
+}
+
 .btn-primary {
     background-color: #2e629e;
     border: 1px solid #2e629e;
