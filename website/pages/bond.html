@@ -13,18 +13,18 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-    <title>CouchClub</title>
+    <title>Bond - eBike on Demand</title>
 </head>
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-md">
     <div class="container">
         <div class="navbar-brand">Bond - eBike on Demand</div>
         <div>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../home.html"><i class="fa fa-home"></i>&nbsp;Home</a>
+                    <a class="nav-link" href="../home.html"><i class="fa fa-home pr-2"></i>Home</a>
                 </li>
             </ul>
         </div>
@@ -36,31 +36,37 @@
     <div class="jumbotron">
         <div class="row">
             <div class="col-md-6">
-                <p>The idea for this application emerged after having experience one too many spoils regarding some movie or tv show while reading in group chats.</p>
-                <p>The aim is to provide a place for people discuss at will with their friends any movie or show that they are currently watching. These are the planned features</p>
+                <p>The iOS app for BOND, an e-bike ride sharing company that services public and private customers.</p>
+                <p>As you would expect from such a service, the app allows customers to fully experience the e-bikes provided by the company. During the past year, all backend services have been internalized by the company, so entirely new custom integrations have been built. The provided services are as follows (short summary):</p>
                 <ul>
-                    <li>Create watchlists, to track a group of movies or shows to watch later</li>
-                    <li>Collaborative watchlists, to enable a group viewing experience</li>
-                    <li>Search for movies or shows</li>
-                    <li>Create chatrooms to discuss a certain watchlist, movie or show</li>
-                    <li>iPad support for a seamless experience in all devices</li>
-                    <li>Dark theme support for devices running iOS 13 or up</li>
+                    <li>Map discovery: geofences, bikes and other points of interest</li>
+                    <li>Bike discovery: list and filter by relative distance, battery percentage</li>
+                    <li>Bike operations: reservation (start/cancel), booking (start/end ride, report issue)</li>
+                    <li>Restoring booking state after an app crash, uninstall or unexpected error</li>
+                    <li>Trip history browsing, with the ability to download invoices</li>
+                    <li>Driver's license verification process</li>
+                    <li>Ability to manage payment methods</li>
+                    <li>Ability to purchase subscriptions, and in-app credits for discounted use</li>
                 </ul>
-                <a href="https://apps.apple.com/us/app/bond/id1154109900?mt=8" class="btn"  target="_blank" style="display:inline-block; overflow:hidden; background:url(../img/AppStoreBadge.svg) no-repeat; width:135px; height:42px;"></a>
+                <a href="https://apps.apple.com/us/app/bond/id1154109900?mt=8" class="btn" target="_blank" style="display:inline-block; overflow:hidden; background:url(../img/AppStoreBadge.svg) no-repeat; width:135px; height:42px;"></a>
             </div>
             <div class="col-md-6">
                 <h5>Relevant Technologies</h5>
                 <ul>
-                    <li>Built entirely with Swift</li>
-                    <li>Core Data - store all application data</li>
-                    <li>Firebase: Auth - user accounts, login and account creation</li>
+                    <li>REST APIs: interaction with internal and third-party services</li>
+                    <li>Alamofire: performing and managing networking operations</li>
+                    <li>Google Maps: GeoJSON, points of interest, clustering, user's location, directions</li>
+                    <li>Firebase: Crashlytics, Cloud Messaging, Dynamic Links, Analytics, App Distribution</li>
                     <li>Firebase: Firestore - business logic (chatrooms and messages, watchlists)</li>
-                    <li>Firebase: Messaging + Cloud Functions - push notifications, database cleanup</li>
+                    <li>Jumio: driver's license verification</li>
+                    <li>Stripe: adding/removing payment methods (including 3D-secure)</li>
+                    <li>Fastlane: automated submission process</li>
                 </ul>
-                <h4>Implementation Details</h4>
+                <h5>Implementation Details</h5>
                 <ul>
-                    <li>REST Interface - API for Movies/Shows</li>
-                    <li>Uses design patterns: coordinator, builder, singleton</li>
+                    <li>Built entirely with Swift</li>
+                    <li>Follows the MVC architecture</li>
+                    <li>Storyboard-based UI</li>
                 </ul>
             </div>
         </div>
@@ -74,8 +80,9 @@
             <div class="col-sm-6 col-md-6 centered">
                 <div>
                     <h3>Registration Flow</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <p>Users are presented with a customized registration flow. It begins with a welcome page, which then leads the user to a registration process based on a phone number. Users receive an SMS code for confirmation, after which some personal data will be colected to finalize the creation process. Existing users will be signed in instead, after verifying their SMS code.</p>
+                    <p>When opened for the first time, the app will prompt the user for location access (necessary) and permission to send notifications.</p>
+                </div>
             </div>
         </div>
 
@@ -89,8 +96,9 @@
             <div class="col-sm-6 col-md-6 centered offset-md-1">
                 <div>
                     <h3>Discovery</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <p>Users have multiple ways to find bikes: move around the map to locate bikes nearby, or see a list of bikes, sortable by distance or battery level. When a bike is selected, the map will zoom or move to accomodate both the user and the selected bike.
+                    <p>The map will also show a geofence around the city's zone of operation, and display charging stations nearby.</p>
+                </div>
             </div>
             <div class="col-sm-6 col-md-4 hide-sm">
                 <img class="bg-shadow" src="../img/bond/Discover Bikes.gif">
@@ -106,9 +114,11 @@
             </div>
             <div class="col-sm-6 col-md-6 centered">
                 <div>
-                    <h3>Ride</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <h3>Riding Experience</h3>
+                    <p>After booking a bike, users are presented with the Ride interface. From this interface they can manage their ride: toggle parking mode (lock the bike temporarily), end the booking or report an issue.It is also possible to collapse/expand the popover view of the ride interface.</p>
+                    <p>During an ongoing ride, the app will follow the user's location on the map, updating its view accordingly. This is canceled if the user pans on the map, and is re-enabled after pressing the user location button.</p>
+                    <p>After finishing a ride, a brief summary is presented, with a button to see more ride details, such as the ride costs.</p>
+                </div>
             </div>
         </div>
 
@@ -121,9 +131,10 @@
             </div>
             <div class="col-sm-6 col-md-6 centered offset-md-1">
                 <div>
-                    <h3>Reservation</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <h3>Reservations</h3>
+                    <p>For convenience, users can reserve bikes for 10 minutes. If they do so, the "own" the bike for that duration, and a timer is presented to keep track of how much time there is left.</p>
+                    <p>At any point, users can either cancel the reservation, or book the bike as usual.</p>
+                </div>
             </div>
             <div class="col-sm-6 col-md-4 hide-sm">
                 <img class="bg-shadow" src="../img/bond/Reservation.gif">
@@ -139,9 +150,10 @@
             </div>
             <div class="col-sm-6 col-md-6 centered">
                 <div>
-                    <h3>DLV</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <h3>Driver's License Verification</h3>
+                    <p>As a part of the registration process, before booking a bike for the first time users will be asked to provide their driver's licenses (legal requirements due to the bike's maximum speed).</p>
+                    <p>Users are guided through the Jumio SDK (which has been customized) and submit their document. Upon completion, the app receives and displays a notification to the user, informing of the verification result: if successful, they can start riding, otherwise a new submission is required. The UI is updated accordingly to reflect the verification result.</p>
+                </div>
             </div>
         </div>
 
@@ -154,9 +166,11 @@
             </div>
             <div class="col-sm-6 col-md-6 centered offset-md-1">
                 <div>
-                    <h3>Payment Methods</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <h3>Managing Payment Methods</h3>
+                    <p>Through this interface, users can add, edit and remove payment methods associated with their account. This associates a Stripe payment method to their account in the backend.</p>
+                    <p>Users can also specify a default payment method, the one that will be used when attempting to charge a payment.</p>
+                    <p>Side note: the swipe to edit/delete was built from scratch, it is not not a third-party library as none fit our UI designs.</p>
+                </div>
             </div>
             <div class="col-sm-6 col-md-4 hide-sm">
                 <img class="bg-shadow" src="../img/bond/Payment Methods.gif">
@@ -173,14 +187,15 @@
             <div class="col-sm-6 col-md-6 centered">
                 <div>
                     <h3>Menu Options</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui nostrum at aut aliquam facilis debitis praesentium, iusto possimus assumenda numquam eum officia voluptas, ab molestiae illo quam adipisci magnam!</p>
-                </div>                        
+                    <p>In addition to the main experience, a side menu provides users with more pages and information.</p>
+                    <p>Users can scroll through their ride history, find ways to contact support, access settings for the app and much more.</p>
+                </div>
             </div>
         </div>
-		
+
     </div>
 
-	&nbsp;
+    &nbsp;
 
 </div>
 

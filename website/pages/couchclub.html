@@ -18,13 +18,13 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light">
+<nav class="navbar navbar-expand-md">
     <div class="container">
         <div class="navbar-brand">CouchClub</div>
         <div>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../home.html"><i class="fa fa-home"></i>&nbsp;Home</a>
+                    <a class="nav-link" href="../home.html"><i class="fa fa-home pr-2"></i>Home</a>
                 </li>
             </ul>
         </div>
@@ -38,7 +38,7 @@
             <div class="col-md-6">
                 <p>This project is still ongoing.</p>
                 <p>The idea for this application emerged after having experience one too many spoils regarding some movie or tv show while reading in group chats.</p>
-                <p>The aim is to provide a place for people discuss at will with their friends any movie or show that they are currently watching. These are the planned features</p>
+                <p>The aim is to provide a place for people discuss at will with their friends any movie or show that they are currently watching. The following are the expected features after completion:</p>
                 <ul>
                     <li>Create watchlists, to track a group of movies or shows to watch later</li>
                     <li>Collaborative watchlists, to enable a group viewing experience</li>
@@ -47,21 +47,24 @@
                     <li>iPad support for a seamless experience in all devices</li>
                     <li>Dark theme support for devices running iOS 13 or up</li>
                 </ul>
-                <a href="https://www.figma.com/file/C11jUYQpPRVeyhmJzn4NWl/App-Design" target="_blank"><button class="btn btn-outline-secondary">Figma Design</button></a>&nbsp;&nbsp;
-                <a href="https://github.com/rubenrdias/couchclub" target="_blank" class="btn btn-outline-secondary">Source Code</a>
+                <a href="https://www.figma.com/file/C11jUYQpPRVeyhmJzn4NWl/App-Design" target="_blank" class="btn btn-outline-secondary"><i class="fab fa-figma pr-2" aria-hidden="true"></i>Design Specs</a>
+                &nbsp;&nbsp;
+                <a href="https://www.figma.com/file/C11jUYQpPRVeyhmJzn4NWl/App-Design" target="_blank" class="btn btn-outline-secondary"><i class="fab fa-github pr-2" aria-hidden="true"></i>Source Code</a>
             </div>
             <div class="col-md-6">
                 <h5>Relevant Technologies</h5>
                 <ul>
-                    <li>Built entirely with Swift</li>
+                    <li>REST Interface - API for Movies/Shows</li>
                     <li>Core Data - store all application data</li>
                     <li>Firebase: Auth - user accounts, login and account creation</li>
                     <li>Firebase: Firestore - business logic (chatrooms and messages, watchlists)</li>
                     <li>Firebase: Messaging + Cloud Functions - push notifications, database cleanup</li>
                 </ul>
-                <h4>Implementation Details</h4>
+                <h5>Implementation Details</h5>
                 <ul>
-                    <li>REST Interface - API for Movies/Shows</li>
+                    <li>Built entirely with Swift</li>
+                    <li>Follows the MVC architecture</li>
+                    <li>Storyboard-based UI</li>
                     <li>Uses design patterns: coordinator, builder, singleton</li>
                 </ul>
             </div>

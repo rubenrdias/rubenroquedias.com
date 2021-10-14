@@ -5,16 +5,13 @@ html, body {
     height: 100%;
     width: 100%;
     font-family: 'Nunito', sans-serif;
-    color: #222;
+    color: #404040;
 }
 
 h1, h2, h3, h4, h5 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-}
-
-p, li {
-    color: #404040;
+    color: #222;
 }
 
 .btn-primary {
@@ -39,20 +36,31 @@ p, li {
 a {
     color: #2e629e;
 }
-a:hover {
-    color: #244b79;
-}
 
+.navbar {
+    background-color: #2b2b2b;
+}
 .navbar-nav li:not(:last-child) {
     padding-right: 16px;
 }
 .navbar-brand {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 500;
+    color: white;
 }
 .navbar .container, footer .container  {
     max-width: 1200px;
     padding: 0 16px;
+}
+.navbar .nav-item {
+    border-radius: 0.25rem;
+}
+.navbar a {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+.navbar a:hover {
+    background-color: #3f3f3f;
 }
 
 .wrapper {
@@ -70,7 +78,9 @@ a:hover {
 }
 
 .banner {
+    margin: 0 auto;
     text-align: center;
+    max-width: 60%;
 }
 .banner img {
     width: 180px;
@@ -82,15 +92,17 @@ a:hover {
     -webkit-box-shadow: 0 0 4px 1px rgb(196, 196, 196);
     box-shadow:         0 0 4px 1px rgb(196, 196, 196);
 }
-.banner p {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 60%;
+.banner h3 {
+    padding-bottom: 16px;
+}
+.banner .links {
+    padding: 0;
 }
 
 .jumbotron {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(247, 247, 247);
     padding: 2rem 2em;
+    border-radius: 0.25rem;
 }
 
 .container-fluid .row.spaced {
@@ -120,22 +132,20 @@ a:hover {
 }
 
 footer {
-    background-color: #494949;
-    color: #d5d5d5;
+    background-color: #2b2b2b;
 }
 footer h5 {
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    margin: auto 0;
-}
-footer a {
-    color: #d5d5d5;
-}
-footer a:hover {
+    font-size: 1em;
     color: white;
 }
 
+.card {
+    border: none;
+    background-color: rgb(247, 247, 247);
+    border-radius: 0.25rem;
+}
 .card > a {
     text-align: center;
 }
