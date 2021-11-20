@@ -337,7 +337,7 @@ function setNotifyParticipantLoadingAnimation(button, loading) {
 }
 
 function setNotifyParticipantsLoadingAnimation(loading) {
-	const html = loading ? `<i class="fas fa-spinner fa-spin"></i> Notifying participants...` : `Notify participants`;
+	const html = loading ? `<i class="fas fa-spinner fa-spin"></i> A notificar...` : `Notificar participantes`;
 	setNotifyParticipantsButtonHTML(html);
 }
 
@@ -353,18 +353,6 @@ function setHTML(component, html) {
 function onExportFilePressed() {
 	const fileManager = new FileManager();
 	fileManager.downloadMatchExportFile(participantService);
-}
-
-function printMatches() {
-	var matches = "";
-	participantService.matches.forEach( (matchId, pId) => {
-		const p1 = participantService.getParticipant(pId);
-		const p2 = participantService.getParticipant(matchId);
-
-		matches += `${p1.name} is matched with ${p2.name}\n`;
-	});
-
-	alert(matches);
 }
 
 function onConfirmResetPressed() {

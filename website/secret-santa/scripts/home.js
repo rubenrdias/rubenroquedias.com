@@ -450,7 +450,7 @@ async function onGeneratePressed() {
 
 function setGenerateButtonLoadingAnimation(loading) {
 	const button = document.getElementById('generateButton');
-	const html = loading ? `<i class="fas fa-spinner fa-spin"></i> A atribuir...` : `</i> Gerar Atribuições`;
+	const html = loading ? `<i class="fas fa-spinner fa-spin"></i> A sortear...` : `Sortear`;
 	setHTML(button, html)
 }
 

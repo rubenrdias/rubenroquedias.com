@@ -25,12 +25,12 @@
 			<div class="row m-0">
 				<div class="container-fluid p-0">
 					<h1>Novo Amigo Invisível</h1>
-					<p>Isto vai eliminar as atribuições atuais e começar um novo processo de atribuição.</p>
+					<p>Isto vai eliminar as atribuições atuais e começar um novo sorteio.</p>
 				</div>
 
 				<div class="p-0">
 					<button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#confirmResetModal">Reset</button>
-					<button class="btn btn-secondary mx-2" data-bs-toggle="modal" data-bs-target="#confirmRematchModal">Editar e re-atribuir</button>
+					<button class="btn btn-secondary mx-2" data-bs-toggle="modal" data-bs-target="#confirmRematchModal">Editar participantes e restrições</button>
 				</div>
 			</div>
 
@@ -54,7 +54,7 @@
 
 			<div class="d-flex mt-5 m-0">
 				<button class="btn btn-primary" id="notifyParticipantsButton">Notificar participantes</button>
-				<button class="btn btn-secondary mx-2" id="exportFileButton">Exportar atribuições</button>
+				<button class="btn btn-secondary mx-2" id="exportFileButton">Exportar ficheiro de backup</button>
 			</div>
 
 		</div>
@@ -93,7 +93,7 @@
 					<h4 class="modal-title" id="confirmResetModal">Confirmar reset</h4>
 				</div>
 				<div class="modal-body">
-					<p>Esta acção é irreversível e todos os dados de atribuição vão ser perdidos. Se achas que podes precisar de restaurar as atribuições já feitas, exporta um ficheiro de backup antes de continuar com o reset.</p>
+					<p>Esta acção é irreversível e o resultado do sorteio atual vai ser perdido. Se achas que podes precisar de restaurar este sorteio, exporta um ficheiro de backup antes de continuar.</p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -107,14 +107,14 @@
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="confirmRematchModal">Confirmar re-atribuições</h4>
+					<h4 class="modal-title" id="confirmRematchModal">Confirmar novo sorteio</h4>
 				</div>
 				<div class="modal-body">
-					<p>Esta acção é irreversível e todos os dados de atribuição vão ser perdidos. Só vão ficar guardados os dados dos participantes e das restrições. Se achas que podes precisar de restaurar as atribuições já feitas, exporta um ficheiro de backup antes de continuar com o reset.</p>
+					<p>Esta acção é irreversível e o resultado do sorteio atual vai ser perdido. Só vão ficar guardados os dados dos participantes e das restrições. Se achas que podes precisar de restaurar este sorteio, exporta um ficheiro de backup antes de continuar.</p>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="confirmRematchButton">Sim, re-atribuir</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="confirmRematchButton">Sim, voltar a sortear</button>
 				</div>
 			</div>
 		</div>
