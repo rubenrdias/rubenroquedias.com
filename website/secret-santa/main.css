@@ -1,10 +1,16 @@
 .background {
-	height: 100vh;
+	z-index: -1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
 	background-image: url('img/background.jpg');
 	background-size: cover;
-	background-position: center;
+	background-position: top;
+	background-repeat: no-repeat;
 }
-.background .content {
+.content {
 	max-width: 680pt;
 	min-height: 100vh;
 	background-color: rgb(248, 249, 250);
