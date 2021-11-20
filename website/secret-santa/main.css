@@ -1,0 +1,47 @@
+.background {
+	height: 100vh;
+	background-image: url('img/background.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.background .content {
+	max-width: 680pt;
+	min-height: 100vh;
+	background-color: rgb(248, 249, 250);
+	box-shadow: 0 0 32px 32px rgb(0, 0, 0, 0.15);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Lobster';
+}
+
+.btn-primary {
+	background-color: rgb(86, 126, 153) !important;
+	border-color: rgb(86, 126, 153) !important;
+}
+
+.btn-danger, .btn-warning, .btn-info {
+	background-color: rgb(233, 233, 233) !important;
+	border-color: rgb(233, 233, 233) !important;
+}
+.btn-danger i, .btn-warning i, .btn-info i {
+	color: black;
+}
+
+.w-40 {
+	width: 40%;
+}
+.w-30 {
+	width: 30%;
+}
+.w-35 {
+	width: 35%;
+}
+
+tbody td {
+	vertical-align: middle;
+}
+
+.btn-toolbar {
+	display: block !important;
+}
