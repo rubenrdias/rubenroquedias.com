@@ -180,7 +180,7 @@ export default class ParticipantService {
 		const matchParticipant = this.getParticipant(matchId);
 		return `
 			<p>Para este Natal, vais poder concentrar toda a tua creatividade numa só pessoa.</p>
-			<p>Por isso, com +/- 50€, encontra a prenda ideal para o/a <strong>${matchParticipant.name}</strong>!</p>
+			<p>Por isso, encontra a prenda ideal para o/a <strong>${matchParticipant.name}</strong> e espalha um pouco de magia!</p>
 
 			<h3>Feliz Natal!</>
 			<img src="https://media.giphy.com/media/l0MYN7mdvcZBBpEly/giphy.gif" alt="funny GIF" style="margin-top:32px;">
