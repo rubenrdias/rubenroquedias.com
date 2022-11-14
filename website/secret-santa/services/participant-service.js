@@ -125,7 +125,7 @@ export default class ParticipantService {
 					resolve();
 				}
 				else {
-					reject(`Erro ao notificar o participante.`);
+					reject(`Erro ao notificar o participante:\n${JSON.stringify(response)}`);
 				}
 
 				thisReference.saveParticipantsToLocalStorage();
@@ -138,7 +138,7 @@ export default class ParticipantService {
 			throw `Os participantes ainda não foram atribuídos.`;
 		}
 
-		var emailPromises = this.participants.map( p => {
+		let emailPromises = this.participants.map( p => {
 			const emailSubject = this.emailMatchSubject();
 			const emailBody = this.emailMatchHTML(p);
 			return this.sendEmail(p.email, emailSubject, emailBody);
@@ -177,21 +177,27 @@ export default class ParticipantService {
 			throw `Erro: o participante ${participant.name} ainda não foi atribuído.`
 		}
 
+		// ${christmasGIF ? `<img src="data:image/gif;base64,${christmasGIF} />` : ''}
+
 		const matchParticipant = this.getParticipant(matchId);
 		return `
+			<p>🧑‍🎄🤶 🎄 🤶🎅</p>
+			
 			<p>Para este Natal, vais poder concentrar toda a tua creatividade numa só pessoa.</p>
-			<p>Por isso, encontra a prenda ideal para o/a <strong>${matchParticipant.name}</strong> e espalha um pouco de magia!</p>
+			
+			<p>O limite máximo para gastar são 30€. Por isso, encontra a prenda ideal e espalha um pouco de magia!</p>
 
-			<h3>Feliz Natal!</h3>
-			<img src="https://media.giphy.com/media/l0MYN7mdvcZBBpEly/giphy.gif" alt="funny GIF" style="margin-top:32px;">
+			<p>O teu amigo invisível: <strong>${matchParticipant.name}</strong></p>
+
+			<p>Feliz Natal!</p>
 		`;
 	}
 
 	processSentEmailResults(results) {
 		const emailsUsed = this.participants.map( p => p.email );
-		var failedEmailDeliveries = 0;
+		let failedEmailDeliveries = 0;
 
-		for (var i = 0; i < results.length; i++) {
+		for (let i = 0; i < results.length; i++) {
 			const email = emailsUsed[i];
 			const participant = this.getParticipantByEmail(email)
 
@@ -216,11 +222,11 @@ export default class ParticipantService {
 
 	async sendEmail(toEmail, subject, body) {
 		return Email.send({
-			Host :			'smtp.gmail.com',
-			Username :		'noel.secret.2021@gmail.com',
-			Password :		'lzoA4Dr&pvkdhEpo1EvV%q#k1rxz20Dy7r4Vm3sQcZLOtMQq*o',
+			Host :			'smtp.elasticemail.com',
+			Username :		'amigo.invisivel.2022@gmail.com',
+			Password :		'90DC6D78E4B9378B6C11AC7E16ADAB50DAF7',
 			To:				toEmail,
-			From:			'noel.secret.2021@gmail.com',
+			From:			'amigo.invisivel.2022@gmail.com',
 			Subject:		subject,
 			Body:			body
 		})

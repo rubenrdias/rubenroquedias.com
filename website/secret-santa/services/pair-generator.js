@@ -13,11 +13,11 @@ export default class PairGenerator {
 	}
 
 	async match() {
-		var counter = 0;
+		let counter = 0;
 		const startTime = new Date();
 
 		while (this.matches.size < this.participants.length && counter < 100) {
-			var randomParticipant = undefined;
+			let randomParticipant = undefined;
 
 			if (this.shouldPrioritizeParticipants()) {
 				randomParticipant = this.getRandomUnmatchedParticipantPrioritizedByRestrictions();
@@ -49,14 +49,14 @@ export default class PairGenerator {
 	}
 
 	getRandomUnmatchedParticipant() {
-		var unmatchedParticipants = this.participants.filter( p => !this.matches.has(p.id) );
+		let unmatchedParticipants = this.participants.filter( p => !this.matches.has(p.id) );
 		Utilities.shuffle(unmatchedParticipants);
 		return unmatchedParticipants[0];
 	}
 
 	getRandomUnmatchedParticipantPrioritizedByRestrictions() {
-		var unmatchedParticipants = this.participants.filter( p => !this.matches.has(p.id) );
-		var unmatchedParticipantsWithRestrictions = unmatchedParticipants.filter( p => this.restrictions.get(p.id) );
+		let unmatchedParticipants = this.participants.filter( p => !this.matches.has(p.id) );
+		let unmatchedParticipantsWithRestrictions = unmatchedParticipants.filter( p => this.restrictions.get(p.id) );
 
 		Utilities.shuffle(unmatchedParticipantsWithRestrictions);
 		return unmatchedParticipantsWithRestrictions[0];
@@ -76,7 +76,7 @@ export default class PairGenerator {
 		const matchedParticipantsSet = new Set(this.matches.values());
 
 		const eligibleMatches = this.participants.filter( p => {
-			var isEligible = true;
+			let isEligible = true;
 
 			if (p.id === participant.id ) {
 				isEligible = false;

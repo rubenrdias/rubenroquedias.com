@@ -4,8 +4,8 @@ import ParticipantService from "../services/participant-service.js";
 
 const participantService = new ParticipantService(true);
 const localStorage = new LocalStorage();
-var notifyingParticipants = false;
-var notifyingParticipant = false;
+let notifyingParticipants = false;
+let notifyingParticipant = false;
 
 document.addEventListener('DOMContentLoaded', function () {
 	configureStaticEventListeners();
@@ -117,7 +117,7 @@ function createIndividualButtonsToolbar(buttons) {
 	toolbar.classList = 'btn-toolbar';
 	toolbar.setAttribute('role', 'toolbar');
 
-	var counter = 0
+	let counter = 0
 
 	buttons.forEach( button => {
 		const buttonGroup = createButtonGroup([button]);
@@ -166,7 +166,7 @@ function onNotifyParticipantPressed(row) {
 }
 
 function getNotificationStatusHTML(participant) {
-	return participant.wasNotified ? `Yes` : `No`
+	return participant.wasNotified ? `Sim` : `Não`
 }
 
 async function onNotifyParticipantSuccess(row) {
@@ -240,7 +240,7 @@ function setModalInputValue(modal, name, value) {
 
 function getModalNameInputValue(modal, name) {
 	const modalInputs = modal.querySelectorAll('input');
-	var value = undefined;
+	let value = undefined;
 
 	modalInputs.forEach( input => {
 		if (input.name === name) {
@@ -254,7 +254,7 @@ function getModalNameInputValue(modal, name) {
 function getParticipantRow(participantId) {
 	const table = getParticipantsTableBody();
 	const participantRows = table.querySelectorAll('tr');
-	var matchingRow = undefined;
+	let matchingRow = undefined;
 
 	participantRows.forEach( row => {
 		if (participantId === parseInt(row.dataset.participantId)) {
@@ -284,9 +284,9 @@ async function onNotifyParticipantsPressed() {
 
 async function notifyParticipants() {
 	return new Promise( async function(resolve, reject) {
-		var retries = 10;
-		var success = false;
-		var promiseError = undefined;
+		let retries = 10;
+		let success = false;
+		let promiseError = undefined;
 	
 		while (retries > 0 && !success) {
 			try {

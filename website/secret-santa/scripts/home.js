@@ -5,7 +5,7 @@ import Cypher from "./cypher.js";
 
 const participantService = new ParticipantService();
 const localStorage = new LocalStorage();
-var generatingParticipantMatches = false;
+let generatingParticipantMatches = false;
 
 document.addEventListener('DOMContentLoaded', function () {
 	configureStaticEventListeners();
@@ -54,7 +54,7 @@ function getRestrictionRow(p1Id, p2Id) {
 	const tbody = table.getElementsByTagName('tbody').item(0);
 	const rows = tbody.querySelectorAll('tr');
 
-	var result = undefined;
+	let result = undefined;
 	
 	rows.forEach( row => {
 		if (result !== undefined) {
@@ -253,7 +253,7 @@ function removeRestrictionOptionRow(selectElement, participantId) {
 }
 
 function getParticipantOptionIndex(selectElement, participantId) {
-	for (var i=1; i < selectElement.options.length; i++) {
+	for (let i=1; i < selectElement.options.length; i++) {
 		const option = selectElement[i];
 
 		if (option.value === `${participantId}`) {
@@ -265,7 +265,7 @@ function getParticipantOptionIndex(selectElement, participantId) {
 function removeParticipantRestrictions(participantId) {
 	participantService.restrictions.forEach ( (restrictionSet, p1Id) => {
 		restrictionSet.forEach( p2Id => {
-			var restrictionRow = undefined;
+			let restrictionRow = undefined;
 
 			if (p1Id === participantId) {
 				restrictionRow = getRestrictionRow(participantId, p2Id);
@@ -423,8 +423,8 @@ async function onGeneratePressed() {
 
 	setGenerateButtonLoadingAnimation(true);
 
-	var retries = 1000;
-	var success = false;
+	let retries = 1000;
+	let success = false;
 
 	while (retries > 0 && !success) {
 		try {
@@ -513,7 +513,7 @@ function setUploadLoadingAnimation(button, loading) {
 }
 
 function validateMatchImportedFile(jsonData) {
-	var isValid = true;
+	let isValid = true;
 
 	if (jsonData.participants === undefined ||
 		jsonData.restrictions === undefined || 

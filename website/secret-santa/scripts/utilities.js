@@ -38,7 +38,7 @@ export default class Utilities {
 	}
 
 	static jsonToSet(json, type) {
-		var jsonObject = this.jsonToObject(json);
+		let jsonObject = this.jsonToObject(json);
 
 		if (type === 'int') {
 			jsonObject = jsonObject.map( v => { return parseInt(v) });
@@ -53,7 +53,7 @@ export default class Utilities {
 
 	static jsonToMap(json, keyType = 'string') {
 		const obj = JSON.parse(json);
-		var entries = Object.entries(obj);
+		let entries = Object.entries(obj);
 
 		if (keyType !== 'string') {
 			entries = entries.map( e => { return this.convertEntryKey(e, keyType) });
@@ -63,7 +63,7 @@ export default class Utilities {
 	}
 
 	static jsonToMapOfSet(json, keyType = 'string', setKeyType = 'string') {
-		var map = Utilities.jsonToMap(json, keyType);
+		let map = Utilities.jsonToMap(json, keyType);
 
 		map.forEach( (setJSON, mapKey) => {
 			const set = Utilities.jsonToSet(setJSON, setKeyType);
@@ -74,7 +74,7 @@ export default class Utilities {
 	}
 
 	static mapOfSetToJSON(map) {
-		var mapCopy = new Map();
+		let mapCopy = new Map();
 
 		map.forEach( (entryValue, entryKey) => {
 			const setJSON = Utilities.setToJSON(entryValue);
